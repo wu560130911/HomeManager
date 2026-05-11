@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/terminal_background"
+    android:orientation="vertical"
+    tools:context=".ui.fragment.ShellFragment">
+
+    <!-- 会话标签栏 -->
+    <LinearLayout
+        android:id="@+id/session_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorSurface"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="4dp">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            app:tabBackground="@drawable/tab_background"
+            app:tabIndicatorColor="@color/neonGreen"
+            app:tabMode="scrollable"
+            app:tabSelectedTextColor="@color/neonGreen"
+            app:tabTextColor="@color/colorOnSurfaceVariant" />
+
+        <ImageButton
+            android:id="@+id/btn_new_session"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="4dp"
+            android:background="@drawable/tab_background"
+            android:src="@android:drawable/ic_input_add"
+            android:tint="@color/colorOnBackground"
+            android:scaleType="centerInside"
+            android:contentDescription="New Session" />
+
+        <ImageButton
+            android:id="@+id/btn_settings"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="4dp"
+            android:background="@drawable/tab_background"
+            android:src="@android:drawable/ic_menu_manage"
+            android:tint="@color/colorOnBackground"
+            android:scaleType="centerInside"
+            android:contentDescription="Settings" />
+
+    </LinearLayout>
+
+    <!-- 终端显示区域 -->
+    <FrameLayout
+        android:id="@+id/terminal_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!-- TerminalView 会动态添加 -->
+
+    </FrameLayout>
+
+    <!-- 输入区域 -->
+    <LinearLayout
+        android:id="@+id/input_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorSurface"
+        android:orientation="vertical"
+        android:paddingHorizontal="8dp"
+        android:paddingTop="8dp">
+
+        <!-- 命令输入框 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$"
+                android:textColor="@color/neonGreen"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:typeface="monospace" />
+
+            <EditText
+                android:id="@+id/et_command"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/input_background"
+                android:fontFamily="monospace"
+                android:hint="@string/hint_command"
+                android:imeOptions="actionSend|flagNoExtractUi"
+                android:inputType="text|textNoSuggestions"
+                android:maxLines="1"
+                android:paddingHorizontal="12dp"
+                android:textColor="@color/colorOnBackground"
+                android:textColorHint="@color/colorOnSurfaceVariant"
+                android:textSize="14sp" />
+
+            <ImageButton
+                android:id="@+id/btn_toggle_keyboard"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/input_background"
+                android:src="@android:drawable/ic_menu_sort_by_size"
+                android:tint="@color/colorOnBackground"
+                android:scaleType="centerInside"
+                android:contentDescription="Toggle Keyboard" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- 扩展键盘区域 -->
+    <FrameLayout
+        android:id="@+id/extended_keyboard_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp">
+
+        <!-- ExtendedKeyboardView 会动态添加 -->
+
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 科技风主色调 -->
+    <color name="colorPrimary">#00D4FF</color>
+    <color name="colorPrimaryVariant">#0099CC</color>
+    <color name="colorSecondary">#7C4DFF</color>
+    <color name="colorSecondaryVariant">#651FFF</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorError">#FF5252</color>
+
+    <!-- 科技风背景色 -->
+    <color name="colorBackground">#0A0E21</color>
+    <color name="colorSurface">#1A1F35</color>
+    <color name="colorSurfaceVariant">#252B45</color>
+    <color name="colorCard">#1E2642</color>
+
+    <!-- 文字颜色 -->
+    <color name="colorOnPrimary">#FFFFFF</color>
+    <color name="colorOnSecondary">#FFFFFF</color>
+    <color name="colorOnBackground">#E8EAED</color>
+    <color name="colorOnSurface">#E8EAED</color>
+    <color name="colorOnSurfaceVariant">#9AA0A6</color>
+
+    <!-- 渐变色 -->
+    <color name="gradientStart">#00D4FF</color>
+    <color name="gradientEnd">#7C4DFF</color>
+    <color name="gradientPinkStart">#FF4081</color>
+    <color name="gradientPinkEnd">#7C4DFF</color>
+
+    <!-- 霓虹色 -->
+    <color name="neonBlue">#00D4FF</color>
+    <color name="neonPurple">#7C4DFF</color>
+    <color name="neonPink">#FF4081</color>
+    <color name="neonGreen">#00FF88</color>
+
+    <!-- 终端配色 -->
+    <color name="terminal_background">#0D1117</color>
+    <color name="terminal_text">#00FF88</color>
+
+    <!-- 基础颜色 -->
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="transparent">#00000000</color>
+    <color name="semiTransparent">#80000000</color>
+
+    <!-- 状态栏 -->
+    <color name="statusBarColor">#0A0E21</color>
+
+    <!-- 深色主题颜色（默认值） -->
+    <color name="colorBackgroundDark">#121212</color>
+    <color name="colorSurfaceDark">#1E1E1E</color>
+    <color name="colorSurfaceVariantDark">#2D2D2D</color>
+    <color name="colorOnBackgroundDark">#E6E1E5</color>
+    <color name="colorOnSurfaceDark">#E6E1E5</color>
+    <color name="colorOnSurfaceVariantDark">#B3B3B3</color>
+    <color name="colorPrimaryDark">#81D4FA</color>
+    <color name="colorPrimaryVariantDark">#4FC3F7</color>
+    <color name="colorSecondaryDark">#CE93D8</color>
+    <color name="colorSecondaryVariantDark">#F48FB1</color>
+    <color name="statusBarColorDark">#000000</color>
+    <color name="terminal_background_dark">#0D0D0D</color>
+    <color name="terminal_text_dark">#00FF00</color>
+
+    <!-- 兼容旧代码的颜色 -->
+    <color name="dark_gray">#1A1F35</color>
+    <color name="green">#00FF88</color>
+    <color name="gray">#9AA0A6</color>
+    <color name="blue_primary">#00D4FF</color>
+    <color name="terminal_green">#00FF88</color>
+</resources>

@@ -1,0 +1,73 @@
+<resources>
+    <string name="app_name">家庭管家</string>
+    <string name="title_login">登录</string>
+    <string name="hint_host">地址</string>
+    <string name="hint_port">端口</string>
+    <string name="hint_username">用户名</string>
+    <string name="hint_cert_path">证书路径</string>
+    <string name="btn_login">登录</string>
+    <string name="error_empty_fields">请填写所有字段</string>
+    <string name="error_login_failed">登录失败，请检查配置</string>
+    <string name="title_main">主菜单</string>
+    
+    <!-- 底部导航 -->
+    <string name="menu_home">首页</string>
+    <string name="menu_wol">WOL 远程唤醒</string>
+    <string name="menu_shell">Shell 命令</string>
+    <string name="menu_remote">远程管理</string>
+    <string name="menu_settings">设置</string>
+    
+    <!-- WOL -->
+    <string name="title_wol">WOL 远程唤醒</string>
+    <string name="btn_add_device">添加设备</string>
+    <string name="device_nas">NAS</string>
+    <string name="device_fnos">FNOS</string>
+    <string name="btn_wake">唤醒</string>
+    
+    <!-- Shell -->
+    <string name="title_shell">Shell 命令</string>
+    <string name="hint_command">输入命令</string>
+    <string name="btn_execute">执行</string>
+    <string name="btn_stop">停止</string>
+    <string name="btn_history">历史</string>
+    <string name="btn_common">常用</string>
+    <string name="result_success">执行成功</string>
+    <string name="result_failed">执行失败</string>
+    
+    <!-- 远程管理 -->
+    <string name="title_remote">端口转发配置</string>
+    <string name="btn_add_config">添加配置</string>
+    <string name="btn_apply_all">生效所有配置</string>
+    
+    <!-- 通用 -->
+    <string name="confirm">确定</string>
+    <string name="cancel">取消</string>
+    <string name="edit">编辑</string>
+    <string name="delete">删除</string>
+    <string name="device_name">设备名称</string>
+    <string name="device_mac">MAC 地址</string>
+    <string name="settings_in_development">设置功能开发中</string>
+    <string name="functions_in_development">功能页面开发中</string>
+    <string name="please_login_first">请先登录</string>
+    
+    <!-- 终端 -->
+    <string name="terminal_welcome">Welcome to HomeManager Terminal</string>
+    <string name="no_history">无历史命令</string>
+    <string name="command_stopped">命令已停止</string>
+    <string name="please_enter_command">请输入命令</string>
+    <string name="tap_to_copy">点击复制选中内容</string>
+    <string name="copied_to_clipboard">已复制到剪贴板</string>
+    <string name="please_fill_device_info">请填写设备名称和 MAC 地址</string>
+    <string name="add_device">添加设备</string>
+    <string name="edit_device">修改设备</string>
+    <string name="wake_command_sent">唤醒命令已发送:</string>
+    <string name="wake_failed">唤醒失败:</string>
+    
+    <!-- 终端设置 -->
+    <string name="terminal_settings">终端设置</string>
+    <string name="font_size">字体大小</string>
+    <string name="theme">主题</string>
+    <string name="cursor_blink">光标闪烁</string>
+    
+    <string name="_127_0_0_1">127.0.0.1</string>
+</resources>

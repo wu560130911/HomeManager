@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/terminal_background"
+    android:orientation="vertical"
+    tools:context=".ui.fragment.ShellFragment">
+
+    <!-- 终端输出区域 - 自动填充剩余空间 -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_terminal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="8dp"
+        app:cardBackgroundColor="@color/colorSurface"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="2dp">
+
+        <ScrollView
+            android:id="@+id/sv_terminal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"
+            android:fillViewport="true">
+
+            <TextView
+                android:id="@+id/tv_terminal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:lineSpacingExtra="2dp"
+                android:padding="8dp"
+                android:textColor="@color/neonGreen"
+                android:textSize="12sp" />
+
+        </ScrollView>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- 命令输入区域 - 固定在底部 -->
+    <LinearLayout
+        android:id="@+id/ll_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginBottom="12dp"
+        android:orientation="vertical">
+
+        <!-- 命令输入行 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <EditText
+                android:id="@+id/et_command"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:hint="输入命令..."
+                android:inputType="text"
+                android:textSize="14sp"
+                android:textColor="@color/colorOnBackground"
+                android:textColorHint="@color/colorOnSurfaceVariant"
+                android:background="@drawable/input_background"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:layout_marginEnd="8dp"
+                android:singleLine="true"
+                android:imeOptions="actionSend|flagNoExtractUi" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_execute"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:minWidth="80dp"
+                android:text="执行"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:backgroundTint="@color/neonGreen"
+                app:cornerRadius="8dp" />
+
+        </LinearLayout>
+
+        <!-- 功能按钮行 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_history"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="历史"
+                android:textSize="14sp"
+                android:layout_marginEnd="6dp"
+                app:backgroundTint="@color/colorSurfaceVariant"
+                android:textColor="@color/colorOnBackground"
+                app:cornerRadius="8dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_common"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="常用"
+                android:textSize="14sp"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                app:backgroundTint="@color/colorSurfaceVariant"
+                android:textColor="@color/colorOnBackground"
+                app:cornerRadius="8dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_stop"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="停止"
+                android:textSize="14sp"
+                android:layout_marginStart="6dp"
+                app:backgroundTint="@color/neonPink"
+                app:cornerRadius="8dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

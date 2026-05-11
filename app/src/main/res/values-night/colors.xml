@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 深色主题背景色 -->
+    <color name="colorBackgroundDark">#121212</color>
+    <color name="colorSurfaceDark">#1E1E1E</color>
+    <color name="colorSurfaceVariantDark">#2D2D2D</color>
+
+    <!-- 深色主题文字颜色 -->
+    <color name="colorOnBackgroundDark">#E6E1E5</color>
+    <color name="colorOnSurfaceDark">#E6E1E5</color>
+    <color name="colorOnSurfaceVariantDark">#B3B3B3</color>
+
+    <!-- 深色主题强调色 -->
+    <color name="colorPrimaryDark">#81D4FA</color>
+    <color name="colorPrimaryVariantDark">#4FC3F7</color>
+    <color name="colorSecondaryDark">#CE93D8</color>
+    <color name="colorSecondaryVariantDark">#F48FB1</color>
+
+    <!-- 深色主题状态栏 -->
+    <color name="statusBarColorDark">#000000</color>
+
+    <!-- 终端配色（深色主题下保持一致） -->
+    <color name="terminal_background_dark">#0D0D0D</color>
+    <color name="terminal_text_dark">#00FF00</color>
+</resources>

@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" width="960" height="560">
+  <style>
+    text { font-family: -apple-system, "SF Pro Display", "Helvetica Neue", sans-serif; }
+    .title { fill: #f0f6fc; font-size: 22px; font-weight: 700; }
+    .label { fill: #f0f6fc; font-size: 14px; font-weight: 600; }
+    .sublabel { fill: #8b949e; font-size: 11px; }
+    .layer-num { fill: #0a0e21; font-size: 16px; font-weight: 700; }
+  </style>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0e21"/>
+      <stop offset="50%" stop-color="#0f1328"/>
+      <stop offset="100%" stop-color="#0a0e21"/>
+    </linearGradient>
+    <radialGradient id="glow-red" cx="50%" cy="20%" r="40%">
+      <stop offset="0%" stop-color="rgba(255,64,129,0.10)"/>
+      <stop offset="100%" stop-color="rgba(255,64,129,0)"/>
+    </radialGradient>
+    <radialGradient id="glow-green" cx="50%" cy="80%" r="35%">
+      <stop offset="0%" stop-color="rgba(0,255,136,0.08)"/>
+      <stop offset="100%" stop-color="rgba(0,255,136,0)"/>
+    </radialGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="5" flood-color="rgba(0,0,0,0.5)"/>
+    </filter>
+    <marker id="arrow-down" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ff4081"/>
+    </marker>
+    <marker id="arrow-block" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ff6b6b"/>
+    </marker>
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#112240" stroke-width="0.4" opacity="0.4"/>
+    </pattern>
+    <!-- Shield shape for layers -->
+    <linearGradient id="shield-1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(0,212,255,0.15)"/>
+      <stop offset="100%" stop-color="rgba(0,212,255,0.05)"/>
+    </linearGradient>
+    <linearGradient id="shield-2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(124,77,255,0.15)"/>
+      <stop offset="100%" stop-color="rgba(124,77,255,0.05)"/>
+    </linearGradient>
+    <linearGradient id="shield-3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255,64,129,0.15)"/>
+      <stop offset="100%" stop-color="rgba(255,64,129,0.05)"/>
+    </linearGradient>
+    <linearGradient id="shield-4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(0,255,136,0.15)"/>
+      <stop offset="100%" stop-color="rgba(0,255,136,0.05)"/>
+    </linearGradient>
+    <linearGradient id="grad-node" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a1f35"/>
+      <stop offset="100%" stop-color="#252b45"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="960" height="560" fill="url(#bg)"/>
+  <rect width="960" height="560" fill="url(#grid)" opacity="0.3"/>
+  <rect width="960" height="560" fill="url(#glow-red)"/>
+  <rect width="960" height="560" fill="url(#glow-green)"/>
+
+  <!-- Title -->
+  <text x="480" y="42" text-anchor="middle" class="title">纵深安全防护 · 四层防御体系</text>
+  <line x1="300" y1="52" x2="660" y2="52" stroke="#ff4081" stroke-width="0.5" opacity="0.5"/>
+
+  <!-- Attack indicator (top) -->
+  <rect x="380" y="70" width="200" height="36" rx="18" fill="rgba(255,64,129,0.15)" stroke="#ff4081" stroke-width="1"/>
+  <text x="480" y="94" text-anchor="middle" fill="#ff4081" font-size="13" font-weight="700">⚠ 外部攻击流量</text>
+
+  <!-- Arrow: Attack -> Layer 1 -->
+  <line x1="480" y1="106" x2="480" y2="132" stroke="#ff4081" stroke-width="2" marker-end="url(#arrow-down)"/>
+
+  <!-- Layer 1: SSH 密钥认证 -->
+  <rect x="100" y="135" width="760" height="85" rx="12" fill="url(#shield-1)" stroke="#00d4ff" stroke-width="1.5"/>
+  <rect x="100" y="135" width="760" height="3" rx="1" fill="#00d4ff" opacity="0.6"/>
+  <circle cx="145" cy="175" r="18" fill="#00d4ff"/>
+  <text x="145" y="181" text-anchor="middle" class="layer-num">1</text>
+  <text x="190" y="168" class="label" fill="#00d4ff">🔐 SSH 密钥认证</text>
+  <text x="190" y="190" class="sublabel">仅允许 4096 位 RSA / Ed25519 密钥登录，禁用密码认证，从根源杜绝暴力破解</text>
+  <rect x="660" y="155" width="170" height="48" rx="8" fill="rgba(255,64,129,0.08)" stroke="rgba(255,64,129,0.2)" stroke-width="0.5"/>
+  <text x="745" y="175" text-anchor="middle" fill="#ff4081" font-size="11" font-weight="600">✗ 暴力破解</text>
+  <text x="745" y="193" text-anchor="middle" fill="#ff4081" font-size="11" font-weight="600">✗ 弱口令攻击</text>
+
+  <!-- Arrow through Layer 1 -> Layer 2 -->
+  <line x1="480" y1="220" x2="480" y2="245" stroke="#ff4081" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.5"/>
+  <text x="520" y="237" fill="#8b949e" font-size="10">（漏网之鱼）</text>
+
+  <!-- Layer 2: Fail2ban -->
+  <rect x="100" y="248" width="760" height="85" rx="12" fill="url(#shield-2)" stroke="#7c4dff" stroke-width="1.5"/>
+  <rect x="100" y="248" width="760" height="3" rx="1" fill="#7c4dff" opacity="0.6"/>
+  <circle cx="145" cy="288" r="18" fill="#7c4dff"/>
+  <text x="145" y="294" text-anchor="middle" class="layer-num">2</text>
+  <text x="190" y="281" class="label" fill="#7c4dff">🛡️ Fail2ban 入侵检测</text>
+  <text x="190" y="303" class="sublabel">实时监控 SSH 登录日志，2 次失败即自动封禁 IP，封禁时长 10 年（等效永久）</text>
+  <rect x="660" y="268" width="170" height="48" rx="8" fill="rgba(255,64,129,0.08)" stroke="rgba(255,64,129,0.2)" stroke-width="0.5"/>
+  <text x="745" y="288" text-anchor="middle" fill="#ff4081" font-size="11" font-weight="600">✗ 扫描器探测</text>
+  <text x="745" y="306" text-anchor="middle" fill="#ff4081" font-size="11" font-weight="600">✗ 持续试探攻击</text>
+
+  <!-- Arrow through Layer 2 -> Layer 3 -->
+  <line x1="480" y1="333" x2="480" y2="358" stroke="#ff4081" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.3"/>
+
+  <!-- Layer 3: 双因子认证 -->
+  <rect x="100" y="361" width="760" height="85" rx="12" fill="url(#shield-3)" stroke="#ff4081" stroke-width="1.5"/>
+  <rect x="100" y="361" width="760" height="3" rx="1" fill="#ff4081" opacity="0.6"/>
+  <circle cx="145" cy="401" r="18" fill="#ff4081"/>
+  <text x="145" y="407" text-anchor="middle" class="layer-num">3</text>
+  <text x="190" y="394" class="label" fill="#ff4081">🔑 SSH + OTP 双因子认证</text>
+  <text x="190" y="416" class="sublabel">密钥 + Google Authenticator 动态验证码，即使密钥泄露，无验证码也无法登录</text>
+  <rect x="660" y="381" width="170" height="48" rx="8" fill="rgba(255,64,129,0.08)" stroke="rgba(255,64,129,0.2)" stroke-width="0.5"/>
+  <text x="745" y="401" text-anchor="middle" fill="#ff4081" font-size="11" font-weight="600">✗ 密钥泄露风险</text>
+  <text x="745" y="419" text-anchor="middle" fill="#ff4081" font-size="11" font-weight="600">✗ 中间人攻击</text>
+
+  <!-- Arrow through Layer 3 -> Layer 4 -->
+  <line x1="480" y1="446" x2="480" y2="466" stroke="#ff4081" stroke-width="1" stroke-dasharray="4,3" opacity="0.2"/>
+
+  <!-- Layer 4: 内网隔离 -->
+  <rect x="100" y="469" width="760" height="70" rx="12" fill="url(#shield-4)" stroke="#00ff88" stroke-width="1.5"/>
+  <rect x="100" y="469" width="760" height="3" rx="1" fill="#00ff88" opacity="0.6"/>
+  <circle cx="145" cy="502" r="18" fill="#00ff88"/>
+  <text x="145" y="508" text-anchor="middle" class="layer-num">4</text>
+  <text x="190" y="495" class="label" fill="#00ff88">🏠 内网隔离 · NAS 零暴露</text>
+  <text x="190" y="517" class="sublabel">NAS 完全不暴露公网，跳板机是唯一入口，攻击者无法直接触达核心数据</text>
+
+  <!-- Success indicator (bottom) -->
+  <rect x="350" y="548" width="260" height="0" rx="0" fill="none"/>
+
+  <!-- Defense summary -->
+  <rect x="100" y="70" width="20" height="470" rx="10" fill="rgba(0,255,136,0.1)" stroke="rgba(0,255,136,0.2)" stroke-width="0.5"/>
+  <text x="110" y="310" text-anchor="middle" fill="#00ff88" font-size="11" font-weight="600" transform="rotate(-90, 110, 310)">纵 深 防 御</text>
+
+  <!-- Right side: attack blocked summary -->
+  <rect x="660" y="70" width="200" height="56" rx="10" fill="rgba(255,64,129,0.08)" stroke="rgba(255,64,129,0.2)" stroke-width="0.5"/>
+  <text x="760" y="92" text-anchor="middle" fill="#ff4081" font-size="12" font-weight="600">攻击层层被阻断</text>
+  <text x="760" y="115" text-anchor="middle" fill="#8b949e" font-size="10">每一层都是独立防线</text>
+
+</svg>
